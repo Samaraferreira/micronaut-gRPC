@@ -19,7 +19,7 @@ enum Cargo {
 }
 
 message FuncionarioRequest {
-  string nome = 1; // Protobuf envia apenas a posição não o nome do campo
+  string nome = 1; // Protobuf envia apenas a posição (tag) não o nome do campo
   string cpf = 2;
   int32 idade = 3;
   double salario = 4;
