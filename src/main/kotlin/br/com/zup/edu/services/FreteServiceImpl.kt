@@ -6,12 +6,10 @@ import br.com.zup.edu.ErrorDetails
 import br.com.zup.edu.FreteServiceGrpc
 import com.google.protobuf.Any
 import com.google.rpc.Code
-import com.google.rpc.StatusProto
+import io.grpc.protobuf.StatusProto
 import io.grpc.Status
-import io.grpc.StatusRuntimeException
 import io.grpc.stub.StreamObserver
 import org.slf4j.LoggerFactory
-import java.lang.IllegalArgumentException
 import java.lang.IllegalStateException
 import javax.inject.Singleton
 import kotlin.random.Random
@@ -54,7 +52,7 @@ class FreteServiceImpl : FreteServiceGrpc.FreteServiceImplBase() {
                                         .build()))
                                     .build()
 
-            val e = io.grpc.protobuf.StatusProto.toStatusRuntimeException(statusProto)
+            val e = StatusProto.toStatusRuntimeException(statusProto)
             responseObserver?.onError(e)
         }
 

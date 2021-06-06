@@ -1,3 +1,11 @@
 micronaut:
   application:
     name: protobuf
+endpoints:
+  all:
+    port: 8082
+    sensitive: true
+  health:
+    enabled: true
+    sensitive: false
+    details-visible: ANONYMOUS

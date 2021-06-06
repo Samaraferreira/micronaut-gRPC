@@ -17,6 +17,7 @@ repositories {
 }
 
 micronaut {
+    runtime("netty")
     testRuntime("junit5")
     processing {
         incremental(true)
@@ -38,6 +39,7 @@ dependencies {
 
     testImplementation("io.micronaut:micronaut-http-client")
 
+    implementation("io.micronaut:micronaut-management")
 }
 
 
