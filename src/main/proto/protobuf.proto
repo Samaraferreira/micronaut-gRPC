@@ -9,6 +9,7 @@ package br.com.zup.edu;
 import "google/protobuf/timestamp.proto";
 
 service FuncionarioService {
+
   rpc cadastrar (FuncionarioRequest) returns (FuncionarioResponse) {}
 }
 
